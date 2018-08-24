@@ -10,6 +10,8 @@ import './App.css';
 import FrontPage from '../FrontPage/FrontPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
+import NavBar from '../../components/NavBar/NavBar';
+import { PromiseProvider } from 'mongoose';
 
 
 class App extends Component {
@@ -49,24 +51,24 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Switch>
-            <Route exact path="/" render={() => 
-              <FrontPage />
-            } />
-
-            <Route exact path="/login" render={(props) => 
-              <LoginPage {...props}
-                handleLogin={this.handleLogin}
-              />
-            }/>
-
-            <Route exact path="/signup" render={(props) => 
-              <SignupPage  {...props}
-                handleSignup={this.handleSignup}
-              />
-            }/>
-
-          </Switch>
+          <React.Fragment>
+            <NavBar user={this.state.user} />
+            <Switch>
+              <Route exact path="/" render={() => 
+                <FrontPage />
+              }/>
+              <Route exact path="/login" render={(props) => 
+                <LoginPage {...props}
+                  handleLogin={this.handleLogin}
+                />
+              }/>
+              <Route exact path="/signup" render={(props) => 
+                <SignupPage  {...props}
+                  handleSignup={this.handleSignup}
+                />
+              }/>
+            </Switch>
+          </React.Fragment>
         </Router>
       </div>
     );

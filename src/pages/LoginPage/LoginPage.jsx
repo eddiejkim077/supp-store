@@ -6,8 +6,10 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 const LoginPage = (props) => {
   return (
     <div className="LoginPage">
-      <NavBar />
-      <LoginForm />
+      <LoginForm 
+        handleLogin={props.handleLogin}
+        {...props}
+      />
 
     </div>
   );

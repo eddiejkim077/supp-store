@@ -3,7 +3,7 @@ import NavBar from '../../components/NavBar/NavBar';
 
 const FrontPage = (props) => {
   return (
-    <NavBar />
+    <h1>Hello from Landing page! </h1>
   )
 }
 
