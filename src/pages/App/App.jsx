@@ -5,11 +5,46 @@ import {
   Route,
   Redirect
 } from 'react-router-dom';
+import userService from '../../utils/userService';
 import './App.css';
 import FrontPage from '../FrontPage/FrontPage';
 import LoginPage from '../LoginPage/LoginPage';
+import SignupPage from '../SignupPage/SignupPage';
+
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    }
+  }
+
+  handleLogOut = () => {
+    userService.logout();
+    this.setState({ user: null });
+  }
+
+  handleSignup = () => {
+    this.setState({
+      user: userService.getUser()
+    });
+  }
+
+  handleLogin = () => {
+    this.setState({
+      user: userService.getUser()
+    });
+  }
+
+ 
+  /*---------- Lifecycle Methods ----------*/
+
+  componentDidMount() {
+    let user = userService.getUser();
+    this.setState({ user });
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,9 +54,18 @@ class App extends Component {
               <FrontPage />
             } />
 
-            <Route exact path="/login" render={() => 
-              <LoginPage />
-            } />
+            <Route exact path="/login" render={(props) => 
+              <LoginPage {...props}
+                handleLogin={this.handleLogin}
+              />
+            }/>
+
+            <Route exact path="/signup" render={(props) => 
+              <SignupPage  {...props}
+                handleSignup={this.handleSignup}
+              />
+            }/>
+
           </Switch>
         </Router>
       </div>
