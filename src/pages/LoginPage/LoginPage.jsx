@@ -1,12 +1,13 @@
 import React from 'react';
-import './LoginPage.css';
 import NavBar from '../../components/NavBar/NavBar';
+import './LoginPage.css';
+import LoginForm from '../../components/LoginForm/LoginForm';
 
 const LoginPage = (props) => {
   return (
     <div className="LoginPage">
       <NavBar />
-      <h1>This is the Login page</h1>
+      <LoginForm />
 
     </div>
   );
