@@ -52,7 +52,10 @@ class App extends Component {
       <div className="App">
         <Router>
           <React.Fragment>
-            <NavBar user={this.state.user} />
+            <NavBar 
+            user={this.state.user}
+            handleLogOut={this.handleLogOut} 
+            />
             <Switch>
               <Route exact path="/" render={() => 
                 <FrontPage />
