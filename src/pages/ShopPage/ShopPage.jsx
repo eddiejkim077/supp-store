@@ -3,8 +3,8 @@ import ProductList from '../../components/ProductList/ProductList';
 import productAPI from '../../utils/productAPI';
 
 class ShopPage extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             products: []
         }
@@ -22,7 +22,7 @@ class ShopPage extends Component {
                 <div>
                     <ProductList 
                         products={this.state.products}
-                        // handleAddItem={this.handleAddItem}
+                        handleAddItem={this.props.handleAddItem}
                     />
                 </div>
             </div>

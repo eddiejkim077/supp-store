@@ -20,7 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      cart: []
     }
   }
 
@@ -38,6 +38,24 @@ class App extends Component {
   handleLogin = () => {
     this.setState({
       user: userService.getUser()
+    });
+  }
+
+  handleAddItem = (product) => {
+    this.setState(prevState => {
+      var item = prevState.cart.find(item => item.product === product);
+      var newCart;
+      if (item) {
+        item.quantity++;
+        newCart = prevState.cart;
+      } else {
+        item = {
+          product, 
+          quantity: 1
+        }
+        newCart = prevState.cart.concat(item);
+      };
+      return {cart: newCart};
     });
   }
 
@@ -73,10 +91,14 @@ class App extends Component {
                 />
               }/>
               <Route exact path="/cart" render={(props) =>
-                <CartPage/>
+                <CartPage
+                  cart={this.state.cart}
+                />
               }/>
               <Route exact path="/shopping" render={(props) =>
-                <ShopPage/>
+                <ShopPage {...props}
+                  handleAddItem={this.handleAddItem}
+                />
               }/>
             </Switch>
           </React.Fragment>

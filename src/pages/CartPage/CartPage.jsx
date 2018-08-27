@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Cart from '../../components/Cart/Cart';
 
 const CartPage = (props) => {
   return (
-    <h1>Hello from cart page!</h1>
+    <Cart cart={props.cart}/>
   )
 }
 
