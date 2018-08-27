@@ -7,11 +7,12 @@ import {
 } from 'react-router-dom';
 import userService from '../../utils/userService';
 import './App.css';
+import NavBar from '../../components/NavBar/NavBar';
 import FrontPage from '../FrontPage/FrontPage';
 import LoginPage from '../LoginPage/LoginPage';
 import CartPage from '../CartPage/CartPage'
 import SignupPage from '../SignupPage/SignupPage';
-import NavBar from '../../components/NavBar/NavBar';
+import ShopPage from '../ShopPage/ShopPage';
 import { PromiseProvider } from 'mongoose';
 
 
@@ -59,7 +60,7 @@ class App extends Component {
             />
             <Switch>
               <Route exact path="/" render={() => 
-                <FrontPage />
+                <FrontPage/>
               }/>
               <Route exact path="/login" render={(props) => 
                 <LoginPage {...props}
@@ -72,8 +73,10 @@ class App extends Component {
                 />
               }/>
               <Route exact path="/cart" render={(props) =>
-                <CartPage
-                />
+                <CartPage/>
+              }/>
+              <Route exact path="/shopping" render={(props) =>
+                <ShopPage/>
               }/>
             </Switch>
           </React.Fragment>

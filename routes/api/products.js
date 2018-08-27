@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var usersCtrl = require('../../controllers/users');
+var productsCtrl = require('../../controllers/products');
 
 /*---------- Public Routes ----------*/
-router.post('/signup', usersCtrl.signup);
-router.post('/login', usersCtrl.login);
+router.get('/', productsCtrl.index);
 
 
 

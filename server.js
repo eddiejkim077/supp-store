@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/users', require('./routes/api/users'));
 app.use(require('./config/auth'));
+app.use('/api/products', require('./routes/api/products'));
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
