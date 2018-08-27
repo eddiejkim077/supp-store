@@ -7,6 +7,7 @@ Product.remove({}).then(() => {
     {name: 'Brotein', description: '' , price: 50 },
     {name: 'Bre-Workout', description: '', price: 40 }
   ]).then(() => {
-    proces.exit();
+    process.exit();
   });
 });
+

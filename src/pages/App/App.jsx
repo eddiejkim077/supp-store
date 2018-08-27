@@ -9,6 +9,7 @@ import userService from '../../utils/userService';
 import './App.css';
 import FrontPage from '../FrontPage/FrontPage';
 import LoginPage from '../LoginPage/LoginPage';
+import CartPage from '../CartPage/CartPage'
 import SignupPage from '../SignupPage/SignupPage';
 import NavBar from '../../components/NavBar/NavBar';
 import { PromiseProvider } from 'mongoose';
@@ -68,6 +69,10 @@ class App extends Component {
               <Route exact path="/signup" render={(props) => 
                 <SignupPage  {...props}
                   handleSignup={this.handleSignup}
+                />
+              }/>
+              <Route exact path="/cart" render={(props) =>
+                <CartPage
                 />
               }/>
             </Switch>

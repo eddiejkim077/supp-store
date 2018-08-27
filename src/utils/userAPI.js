@@ -1,5 +1,10 @@
 const BASE_URL = '/api/users/';
 
+export default {
+  signup,
+  login
+};
+
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
@@ -25,8 +30,3 @@ function login(creds) {
   })
   .then(({token}) => token);
 }
-
-export default {
-  signup,
-  login
-};
