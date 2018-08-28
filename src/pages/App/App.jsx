@@ -8,19 +8,23 @@ import {
 import userService from '../../utils/userService';
 import './App.css';
 import NavBar from '../../components/NavBar/NavBar';
+
+import productAPI from '../../utils/productAPI';
+import ordersAPI from '../../utils/ordersAPI';
+
 import FrontPage from '../FrontPage/FrontPage';
 import LoginPage from '../LoginPage/LoginPage';
 import CartPage from '../CartPage/CartPage'
 import SignupPage from '../SignupPage/SignupPage';
 import ShopPage from '../ShopPage/ShopPage';
-import { PromiseProvider } from 'mongoose';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: []
+      user: {},
+      cart: null
     }
   }
 
@@ -41,30 +45,34 @@ class App extends Component {
     });
   }
 
-  handleAddItem = (product) => {
-    this.setState(prevState => {
-      var item = prevState.cart.find(item => item.product === product);
-      var newCart;
-      if (item) {
-        item.quantity++;
-        newCart = prevState.cart;
-      } else {
-        item = {
-          product, 
-          quantity: 1
-        }
-        newCart = prevState.cart.concat(item);
-      };
-      return {cart: newCart};
-    });
+  handleAddItem = (productId) => {
+    productAPI.addProduct(productId)
+    .then(cart => {
+      this.setState({ cart });
+    }); 
   }
 
- 
+  handleRemoveItem = (product) => {
+    this.setState(prevState => {
+      var itemIdx = prevState.cart.findIndex(item => item.product === product);
+      var item = prevState.cart[itemIdx];
+      if (item.quantity === 1) {
+        prevState.cart.splice(itemIdx, 1);
+      } else {
+        item.quantity--;
+      }
+      return prevState;
+    })
+  }
+
   /*---------- Lifecycle Methods ----------*/
 
   componentDidMount() {
     let user = userService.getUser();
-    this.setState({ user });
+    this.setState({ user }, function() {
+      ordersAPI.getCart()
+      .then(cart => this.setState({ cart }));
+    });
   }
 
   render() {
@@ -90,9 +98,11 @@ class App extends Component {
                   handleSignup={this.handleSignup}
                 />
               }/>
-              <Route exact path="/cart" render={(props) =>
+              <Route exact path="/cart" render={({history}) =>
                 <CartPage
                   cart={this.state.cart}
+                  user={this.state.user}
+                  history={history}
                 />
               }/>
               <Route exact path="/shopping" render={(props) =>

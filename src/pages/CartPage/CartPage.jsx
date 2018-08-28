@@ -3,7 +3,14 @@ import Cart from '../../components/Cart/Cart';
 
 const CartPage = (props) => {
   return (
-    <Cart cart={props.cart}/>
+    <div className="CartPage">
+    {props.cart  && 
+      <Cart 
+        cart={props.cart}
+        handleRemoveItem={props.handleRemoveItem}
+      />
+    }
+    </div>
   )
 }
 

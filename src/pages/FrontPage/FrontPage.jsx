@@ -1,8 +1,11 @@
 import React from 'react';
+import './FrontPage.css';
 
 const FrontPage = (props) => {
   return (
-    <h1>Hello from Landing page! </h1>
+    <div className="FrontPage">
+      <h1>Hello from Landing page!</h1>
+    </div>
   )
 }
 

@@ -4,11 +4,12 @@ const CartItem = (props) =>{
   return(
     <div className="CartItem">
       <p>
-        <button onClick={() => props.handleRemoveItem(props.item.product)}> - </button>
         QTY:
-        <span>{props.item.quantity}</span>&nbsp;&nbsp;&nbsp;{props.item.product.name}
+        <span>{props.item.name}</span>
+        <span>{props.item.price}</span>
+        <button onClick={() => props.handleRemoveItem(props.item.product._id)}> - </button>
       </p>
-  </div>
+  </div>  
   )
 }
 

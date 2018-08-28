@@ -1,4 +1,5 @@
 var Product = require('../models/product');
+var Order = require('../models/order');
 
 function index(req,res) {
   Product.find({}, function(err, products) {
@@ -7,6 +8,15 @@ function index(req,res) {
   });
 }
 
+function addProduct(req, res) {
+  Order.cartForUser(req.user._id, function(cart) {
+    cart.addProduct(req.body.productId, function(cart) {
+      res.json(cart);
+    });
+  });
+}
+
 module.exports = {
-  index
+  index,
+  addProduct
 }

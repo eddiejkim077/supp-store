@@ -11,7 +11,8 @@ var productSchema = new mongoose.Schema({
   name: {type: String, required: true },
   description: String,
   price: { type: Number, default: 0 },
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  image: String
 })
 
 module.exports = mongoose.model('Product', productSchema);

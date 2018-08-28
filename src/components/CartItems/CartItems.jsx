@@ -1,14 +1,18 @@
 import React from 'react';
 import CartItem from '../CartItem/CartItem'
 
-const CartItems = (props) => {
-  return(
-    <div className="CartItems">
-      {props.cart.map(item => <CartItem 
+const CartItems = (props) => (
+  <div className="CartItems">
+    {props.items.length ?
+      props.items.map(item => <CartItem 
         item={item}
-      />)}
-    </div>
-  )
-}
+        handleRemoveItem={props.handleRemoveItem}
+        />)
+        :
+    <h3>No Items</h3>
+  }
+  </div>
+)
+
 
 export default CartItems;
