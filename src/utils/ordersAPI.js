@@ -21,8 +21,6 @@ function getAuthRequestOptions(method) {
   };
 }
 
-
-
 export default {
   getCart
 }

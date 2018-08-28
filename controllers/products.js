@@ -16,7 +16,16 @@ function addProduct(req, res) {
   });
 }
 
+function removeProduct(req,res) {
+  Order.cartForUser(req.user._id, function(cart) {
+    cart.removeProduct(req.body.productId, function(cart) {
+      res.json(cart);
+    })
+  })
+}
+
 module.exports = {
   index,
-  addProduct
+  addProduct,
+  removeProduct
 }

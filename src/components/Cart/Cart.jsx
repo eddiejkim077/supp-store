@@ -10,7 +10,6 @@ const Cart = (props) => {
         items={props.cart.items}
         handleRemoveItem={props.handleRemoveItem}
       />
-      
       {/* {total !== 0 ? <div>Total: ${total} </div> : <div>You Have No Items In Cart Yet!</div>} */}
     </section>
   )

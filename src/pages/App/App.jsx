@@ -17,7 +17,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import CartPage from '../CartPage/CartPage'
 import SignupPage from '../SignupPage/SignupPage';
 import ShopPage from '../ShopPage/ShopPage';
-
+import ProductPage from '../ProductPage/ProductPage';
 
 class App extends Component {
   constructor(props) {
@@ -52,17 +52,11 @@ class App extends Component {
     }); 
   }
 
-  handleRemoveItem = (product) => {
-    this.setState(prevState => {
-      var itemIdx = prevState.cart.findIndex(item => item.product === product);
-      var item = prevState.cart[itemIdx];
-      if (item.quantity === 1) {
-        prevState.cart.splice(itemIdx, 1);
-      } else {
-        item.quantity--;
-      }
-      return prevState;
-    })
+  handleRemoveItem = (productId) => {
+    productAPI.removeProduct(productId)
+    .then(cart => {
+      this.setState({ cart });
+    });
   }
 
   /*---------- Lifecycle Methods ----------*/
@@ -98,11 +92,11 @@ class App extends Component {
                   handleSignup={this.handleSignup}
                 />
               }/>
-              <Route exact path="/cart" render={({history}) =>
-                <CartPage
+              <Route exact path="/cart" render={( props) =>
+                <CartPage {...props}
                   cart={this.state.cart}
                   user={this.state.user}
-                  history={history}
+                  handleRemoveItem={this.handleRemoveItem}
                 />
               }/>
               <Route exact path="/shopping" render={(props) =>
@@ -110,6 +104,9 @@ class App extends Component {
                   handleAddItem={this.handleAddItem}
                 />
               }/>
+              <Route exact path="/shopping/:id" render={(props) =>
+                <ProductPage />
+                }/>
             </Switch>
           </React.Fragment>
         </Router>

@@ -4,7 +4,7 @@ import './FrontPage.css';
 const FrontPage = (props) => {
   return (
     <div className="FrontPage">
-      <h1>Hello from Landing page!</h1>
+      <img src="https://i.imgur.com/iSw4Jtx.png"></img>
     </div>
   )
 }
