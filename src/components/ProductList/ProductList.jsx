@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from '../../components/Product/Product'
-
+import './ProductList.css';
 
 const ProductList = (props) => {
   return (
@@ -14,6 +14,7 @@ const ProductList = (props) => {
             <Product
               product={p}
               handleAddItem={props.handleAddItem}
+              handleSelectedProduct={props.handleSelectedProduct}
             />
           )}
         </ul>

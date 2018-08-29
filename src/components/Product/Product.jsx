@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Product.css';
 
 const Product = (props) => {
   return (
     <div>
-      <Link to={`/shopping/${props.product._id}`}> {props.product.name} </Link>
       <article className="Product">
         <img src={props.product.image} alt={props.product.name} />
         <div>
           <div>
-            <span>{props.product.price}</span>
-            <button onClick={() => props.handleAddItem(props.product._id)}> ADD TO CART </button>
+            <button onClick={() => props.handleSelectedProduct(props.product)}> {props.product.name} </button> 
           </div>
         </div>
       </article>

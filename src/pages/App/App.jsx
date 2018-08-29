@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Redirect
@@ -24,7 +23,9 @@ class App extends Component {
     super(props);
     this.state = {
       user: {},
-      cart: null
+      cart: null,
+      products: [],
+      selectedProduct: null
     }
   }
 
@@ -59,6 +60,12 @@ class App extends Component {
     });
   }
 
+  handleSelectedProduct = (product) => {
+    this.setState({selectedProduct: product}, function() {
+      this.props.history.push(`/shop/${product._id}`);
+    });
+  }
+
   /*---------- Lifecycle Methods ----------*/
 
   componentDidMount() {
@@ -72,44 +79,48 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <React.Fragment>
-            <NavBar 
-            user={this.state.user}
-            handleLogOut={this.handleLogOut} 
-            />
-            <Switch>
-              <Route exact path="/" render={() => 
-                <FrontPage/>
+        <React.Fragment>
+          <NavBar 
+          user={this.state.user}
+          handleLogOut={this.handleLogOut} 
+          />
+          <Switch>
+            <Route exact path="/" render={() => 
+              <FrontPage
+              user={this.state.user}
+              />
+            }/>
+            <Route exact path="/login" render={(props) => 
+              <LoginPage {...props}
+                handleLogin={this.handleLogin}
+              />
+            }/>
+            <Route exact path="/signup" render={(props) => 
+              <SignupPage  {...props}
+                handleSignup={this.handleSignup}
+              />
+            }/>
+            <Route exact path="/cart" render={( props) =>
+              <CartPage {...props}
+                cart={this.state.cart}
+                user={this.state.user}
+                handleRemoveItem={this.handleRemoveItem}
+              />
+            }/>
+            <Route exact path="/shop" render={(props) =>
+              <ShopPage {...props}
+                handleAddItem={this.handleAddItem}
+                handleSelectedProduct={this.handleSelectedProduct}
+              />
+            }/>
+            <Route exact path="/shop/:id" render={(props) =>
+              <ProductPage {...props}
+                handleAddItem={this.handleAddItem}
+                product={this.state.selectedProduct}
+              />
               }/>
-              <Route exact path="/login" render={(props) => 
-                <LoginPage {...props}
-                  handleLogin={this.handleLogin}
-                />
-              }/>
-              <Route exact path="/signup" render={(props) => 
-                <SignupPage  {...props}
-                  handleSignup={this.handleSignup}
-                />
-              }/>
-              <Route exact path="/cart" render={( props) =>
-                <CartPage {...props}
-                  cart={this.state.cart}
-                  user={this.state.user}
-                  handleRemoveItem={this.handleRemoveItem}
-                />
-              }/>
-              <Route exact path="/shopping" render={(props) =>
-                <ShopPage {...props}
-                  handleAddItem={this.handleAddItem}
-                />
-              }/>
-              <Route exact path="/shopping/:id" render={(props) =>
-                <ProductPage />
-                }/>
-            </Switch>
-          </React.Fragment>
-        </Router>
+          </Switch>
+        </React.Fragment>
       </div>
     );
   }

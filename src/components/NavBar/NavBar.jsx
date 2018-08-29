@@ -4,10 +4,8 @@ import './NavBar.css';
 
 const NavBar = (props) => {
   let nav = props.user ?
-    <div className="NavBar-auth">
-      <Link to="/shopping" className="NavBar-link">Shop</Link>
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-      <Link to="/" className="NavBar-link"> Home Page </Link>
+  <div className="NavBar-auth">
+      <Link to="/shop" className="NavBar-link">Shop</Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="/cart" className="NavBar-link"> Cart </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -22,6 +20,8 @@ const NavBar = (props) => {
     </div>
   return(
     <div className="NavBar">  
+      <img src="https://i.imgur.com/Laisw2K.png" />
+      <h1>SUPP</h1>
       {nav}
     </div>
   )
