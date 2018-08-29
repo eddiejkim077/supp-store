@@ -1,18 +1,34 @@
 .Product {
   padding: 20px;
-  border: 1px solid black;
   align-items: center;
   display: flex;
-  width: 600px;
+  width: 540px;
   display: flex;
+  margin: 0 auto;
+  border-radius: 8px;
 }
 
 .Product img {
-  /* cursor: pointer; */
   height: 200px;
-  width: 200px;
+}
+
+img:hover {
+  cursor: pointer;
 }
 
 .Product button {
-  
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+#product-price {
+  padding-left: 21px;
+  margin-bottom: -193px;
+}
+
+.Product .Icon {
+  height: 40px;
+  width: 40px;
+  margin-top: -229px;
+  margin-right: -260px;
 }

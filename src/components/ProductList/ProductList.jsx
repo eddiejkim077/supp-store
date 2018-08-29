@@ -9,7 +9,6 @@ const ProductList = (props) => {
         <h2>Product List</h2>
       </div>
       <div className="ProductList-Products">
-        <ul>
           {props.products.map(p =>
             <Product
               product={p}
@@ -17,7 +16,6 @@ const ProductList = (props) => {
               handleSelectedProduct={props.handleSelectedProduct}
             />
           )}
-        </ul>
       </div>
     </section>
   )

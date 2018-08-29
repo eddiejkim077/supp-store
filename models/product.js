@@ -9,13 +9,14 @@ var reviewSchema = new mongoose.Schema({
 
 var productSchema = new mongoose.Schema({
   name: {type: String, required: true },
+  shortdes: String,
   description: String,
   price: { type: Number, default: 0 },
   reviews: [reviewSchema],
-  image: String,
-  image2: String,
-  image3: String,
-  image4: String
+  icon: String,
+  prodListImage: String,
+  nutrImage: String,
+  prodShowImage: String
 })
 
 module.exports = mongoose.model('Product', productSchema);
