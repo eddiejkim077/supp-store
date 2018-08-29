@@ -20,9 +20,9 @@ const NavBar = (props) => {
     </div>
   return(
     <div className="NavBar">  
-      <img src="https://i.imgur.com/Laisw2K.png" />
-      <h1>SUPP</h1>
+      <img src="https://i.imgur.com/jkaSVHl.png" />
       {nav}
+      <h1 className="NavBar-Heading">Supps & Stuff</h1>
     </div>
   )
 }

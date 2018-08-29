@@ -12,7 +12,10 @@ var productSchema = new mongoose.Schema({
   description: String,
   price: { type: Number, default: 0 },
   reviews: [reviewSchema],
-  image: String
+  image: String,
+  image2: String,
+  image3: String,
+  image4: String
 })
 
 module.exports = mongoose.model('Product', productSchema);

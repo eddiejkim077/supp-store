@@ -1,4 +1,43 @@
-.ProductPage img {
-  height: 360px;
-  width: 270px;
+.ProductPage {
+  font-family: 'Roboto Slab', serif;  
+  margin-top: 60px;
 }
+
+.DisplayPhoto {
+  height: 880px;
+  width: 870px;
+  display:flex;
+  flex-direction:column;
+}
+
+.card-text {
+  width: 490px;
+  margin-left: 400px;
+}
+
+.Image-Stack {
+  display: flex;
+}
+
+.DescriptionCard {
+  width: 440px;
+  margin: 0 auto;
+}
+
+.ProductPage button {
+  margin-top: 20px;
+}
+
+.card-body {
+  display: flex;
+}
+
+#nutrition-image {
+  height: 440px;
+  margin-bottom: 50px;
+}
+
+.ProductOverview {
+  margin: 0 auto;
+}
+

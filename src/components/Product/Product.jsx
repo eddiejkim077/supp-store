@@ -5,12 +5,9 @@ const Product = (props) => {
   return (
     <div>
       <article className="Product">
-        <img src={props.product.image} alt={props.product.name} />
-        <div>
-          <div>
-            <button onClick={() => props.handleSelectedProduct(props.product)}> {props.product.name} </button> 
-          </div>
-        </div>
+        <img src={props.product.image} alt={props.product.name} onClick={() => props.handleSelectedProduct(props.product)} />
+        <p>Short Description Here</p>
+        <button class="btn btn-primary"a onClick={() => props.handleSelectedProduct(props.product)} > View Product </button>
       </article>
     </div>
   )

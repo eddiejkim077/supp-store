@@ -1,9 +1,18 @@
 .Product {
   padding: 20px;
+  border: 1px solid black;
+  align-items: center;
+  display: flex;
+  width: 600px;
+  display: flex;
 }
 
 .Product img {
+  /* cursor: pointer; */
   height: 200px;
-  width: 160px;
+  width: 200px;
+}
 
+.Product button {
+  
 }

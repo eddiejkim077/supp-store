@@ -1,31 +1,41 @@
 .NavBar-welcome {
-  color: rgb(13, 102, 140);
+  color: #59B0EA;
   display: flex;
   right: 0;
   position: absolute;
   padding: 7px;
 }
+
 .NavBar {
   height: 65px;
-  color: black;
-  font-family: 'Jockey One', sans-serif;
+  color: white;
+  font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
+  background: repeating-linear-gradient(90deg,
+    black,
+    #303030
+  )
 }
 
 .NavBar h1 {
-  color: darkblue;
+  font-family: 'Archivo Black', sans-serif;
+  color:white;
+  margin: 0 auto;
+  padding-top: 5px;
 }
 
 .NavBar img {
   height: 60px;
   width: 60px;
   display: flex;
-  margin: 20px;
+  margin-top: 3px;
+  margin-left: 140px;
+  position: absolute;
 }
 
 .NavBar-link {
-  color: black;
+  color:  white;
   text-decoration: none;
   font-size: 20px;
 
@@ -35,10 +45,12 @@
   font-size: 30px;
 }
 
+
 .NavBar-auth {
-  padding: 15px;
+  padding: 4px;
   position: absolute;
   right: 0;
+  margin-right: 140px;
 }
 
 .NavBar-unauth {
