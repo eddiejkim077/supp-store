@@ -2,18 +2,16 @@
   padding: 20px;
   align-items: center;
   display: flex;
-  width: 540px;
+  width: 600px;
   display: flex;
   margin: 0 auto;
   border-radius: 8px;
+  margin: 45px; 
 }
 
 .Product img {
   height: 200px;
-}
-
-img:hover {
-  cursor: pointer;
+  margin-right: 40px;
 }
 
 .Product button {
