@@ -81,13 +81,13 @@ class App extends Component {
       <div className="App">
         <React.Fragment>
           <NavBar 
-          user={this.state.user}
-          handleLogOut={this.handleLogOut} 
+            user={this.state.user}
+            handleLogOut={this.handleLogOut} 
           />
           <Switch>
             <Route exact path="/" render={() => 
               <FrontPage
-              user={this.state.user}
+                user={this.state.user}
               />
             }/>
             <Route exact path="/login" render={(props) => 

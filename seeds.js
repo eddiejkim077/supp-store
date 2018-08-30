@@ -10,7 +10,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     icon:'https://i.imgur.com/jakVcUf.png', 
     shortdes:'The gold standard in protein with 24 grams of protein and essential amino acids for muscle growthno', 
     description: 'Lorem ipsum dolor amet before they sold out ugh celiac try-hard, tacos plaid aesthetic gentrify chicharrones hammock marfa intelligentsia drinking vinegar. Art party sartorial distillery mixtape fashion axe viral flannel DIY. Kinfolk lo-fi organic, tilde portland subway tile affogato copper mug blue bottle readymade iPhone crucifix. Single-origin coffee intelligentsia chillwave etsy actually chicharrones leggings banh mi shoreditch.', 
-    price: 50, 
+    price: 57.99, 
     prodListImage:'https://i.imgur.com/S6Qd7yy.jpg', 
     nutrImage:'https://i.imgur.com/uplRdBz.jpg', 
     prodShowImage:'https://i.imgur.com/cOh9iQZ.png'
@@ -19,7 +19,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     icon:'https://i.imgur.com/jGSoKm0.png', 
     shortdes:'Pre-workout powder made with 13 hand picked high qualitynode ingredients by Jim Stoppani', 
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
-    price: 40, 
+    price: 48.99, 
     prodListImage:'https://i.imgur.com/SQvRA7B.jpg', 
     nutrImage:'https://i.imgur.com/tC9kgTM.jpg', 
     prodShowImage:'https://i.imgur.com/z4gix9r.png' 
