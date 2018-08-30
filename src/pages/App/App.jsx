@@ -53,7 +53,7 @@ class App extends Component {
     }); 
   }
 
-  handleRemoveItem = (productId) => {
+  handleRemoveQuantity = (productId) => {
     productAPI.removeProduct(productId)
     .then(cart => {
       this.setState({ cart });
@@ -105,6 +105,7 @@ class App extends Component {
                 cart={this.state.cart}
                 user={this.state.user}
                 handleRemoveItem={this.handleRemoveItem}
+                handleAddItem={this.handleAddItem}
               />
             }/>
             <Route exact path="/shop" render={(props) =>

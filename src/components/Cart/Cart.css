@@ -1,0 +1,8 @@
+.CartAndTotal {
+  display: flex;
+  justify-content: center;
+}
+
+.CartTotal {
+  margin-left: 400px;
+}

@@ -8,6 +8,7 @@ const CartPage = (props) => {
       <Cart 
         cart={props.cart}
         handleRemoveItem={props.handleRemoveItem}
+        
       />
     }
     </div>

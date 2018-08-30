@@ -1,0 +1,6 @@
+.CartItems {
+  display: flex;
+  flex-direction: row;
+  flex-flow: column;
+  align-items: center;
+}

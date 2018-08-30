@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Cart.css';
 import CartItems from '../CartItems/CartItems';
 
 const Cart = (props) => {
@@ -7,12 +7,13 @@ const Cart = (props) => {
   return (
     <section>
       <h1>Your Cart Items</h1>
-      <CartItems 
-        items={props.cart.items}
-        handleRemoveItem={props.handleRemoveItem}
-      />
-
-      <h2>total: ${total}</h2>
+      <div className="CartAndTotal">
+        <CartItems 
+          items={props.cart.items}
+          handleRemoveItem={props.handleRemoveItem}
+        />
+        <h2 className="CartTotal position-fixed">total: ${total}</h2>
+      </div>
     </section>
   )
 }
