@@ -22,7 +22,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 40, 
     prodListImage:'https://i.imgur.com/SQvRA7B.jpg', 
     nutrImage:'https://i.imgur.com/tC9kgTM.jpg', 
-    prodShowImage:'https://i.imgur.com/KXA1Alf.jpg' 
+    prodShowImage:'https://i.imgur.com/z4gix9r.png' 
   },
     {name: 'VitaMode',
     icon:'https://i.imgur.com/GjKBoLz.png', 
@@ -50,6 +50,15 @@ Promise.all([Product.remove({}), Order.remove({})])
     prodListImage:'https://i.imgur.com/1oaNYud.jpg', 
     nutrImage:'https://i.imgur.com/FdKPodr.jpg', 
     prodShowImage:'https://i.imgur.com/ZCynQGO.png' 
+  },
+    {name: 'Z-Elite',
+    icon:'https://i.imgur.com/GjKBoLz.png', 
+    shortdes:'All natural sleep aid that promotes muscle growth, and recovery. Made from a blend of proven minerals that help restful sleep.', 
+    description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
+    price: 17.97, 
+    prodListImage:'https://i.imgur.com/vm0FoA6.jpg', 
+    nutrImage:'https://i.imgur.com/gNd2X4H.png', 
+    prodShowImage:'https://i.imgur.com/BfGYfI2.jpg' 
   }
 
   ]).then(() => {

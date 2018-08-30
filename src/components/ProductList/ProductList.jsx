@@ -6,7 +6,7 @@ const ProductList = (props) => {
   return (
     <section className="ProductList">
       <div>
-        <h2>Product List</h2>
+        <h2>Supplement Lookup</h2>
       </div>
       <div className="ProductList-Products">
           {props.products.map(p =>
