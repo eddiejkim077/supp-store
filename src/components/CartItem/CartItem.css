@@ -1,5 +1,4 @@
 .CartItem-Descriptions {
-  padding: 50px;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -8,10 +7,11 @@
 
 .CartItem {
   border: 1px solid black;
-  width: 400px;
-  height: 511px;
   border-radius: 30px;
   margin: 10px;
+  width: 550px;
+  max-height: 514px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .CartItem img {
@@ -29,6 +29,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 15px;
 }
 
 .HeadingAndIcon {
@@ -98,8 +99,4 @@
 .form-control {
   text-align: center;
   padding: 0;
-}
-
-input:focus{
-  outline:none;
 }

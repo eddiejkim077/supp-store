@@ -4,8 +4,8 @@ import productAPI from '../../utils/productAPI';
 
 
 class ProductPage extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       product: null
     };
@@ -16,7 +16,7 @@ class ProductPage extends React.Component {
     .then(product => this.setState({product}))
   }
 
-  render() {
+  render(props) {
     return (
     this.state.product ?
       <div className="ProductPage">
@@ -30,7 +30,7 @@ class ProductPage extends React.Component {
               <img id="nutrition-image" src={this.state.product.nutrImage} />
               <h2>Product Overview</h2>
               <p className="DescriptionCard">{this.state.product.description}</p>
-              <button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button>
+              {this.props.user ? <button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button> : null}
             </div>
           </div>
         </div>

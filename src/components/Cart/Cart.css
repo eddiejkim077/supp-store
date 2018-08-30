@@ -1,12 +1,32 @@
+.Cart {
+  font-family: 'Roboto Slab', serif;
+}
+
 .CartAndTotal {
   display: flex;
   justify-content: center;
+  
 }
 
 .CartTotal {
-  margin-left: 400px;
+  border: 1px solid black;
+  margin-left: 605px;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .Cart h1 {
   margin: 20px;
 }
+
+.CartTotalTax {
+  border-bottom: 3px solid black;
+  padding-bottom: 20px;
+  margin: 0 20px;
+}
+  

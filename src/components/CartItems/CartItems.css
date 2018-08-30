@@ -1,6 +1,9 @@
 .CartItems {
+  font-family: 'Roboto Slab', serif;
   display: flex;
   flex-direction: row;
-  flex-flow: column;
   align-items: center;
+  flex-flow: wrap;
+  justify-content: center;
+  margin-right: 411px;
 }

@@ -11,9 +11,13 @@ const Cart = (props) => {
         <CartItems 
           items={props.cart.items}
           handleRemoveItem={props.handleRemoveItem}
-          // handleAddItem={props.handleAddItem}
+          handleAddItem={props.handleAddItem}
         />
-        <h2 className="CartTotal position-fixed">total: ${total}</h2>
+        <div className="CartTotal position-fixed">
+          <h4>subtotal: ${total}</h4>
+          <h4 className="CartTotalTax">tax: 7.25%</h4>
+          <h2>total: ${parseFloat(total + (total * .0725)).toFixed(2)}</h2>
+        </div>
       </div>
     </section>
   )

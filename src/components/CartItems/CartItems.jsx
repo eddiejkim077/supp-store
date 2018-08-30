@@ -9,7 +9,7 @@ const CartItems = (props) => (
         <CartItem 
           item={item}
           handleRemoveItem={props.handleRemoveItem}
-          // handleAddItem={props.handleAddItem}
+          handleAddItem={props.handleAddItem}
         />)
     :
       <h3>No Items</h3>

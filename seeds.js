@@ -6,7 +6,7 @@ var Order = require('./models/Order');
 Promise.all([Product.remove({}), Order.remove({})])
 .then(() => {
   Product.create([
-    {name: 'ON Gold Standard 100% Whey Protein',
+    {name: 'ON Gold Standard Protein',
     icon:'https://i.imgur.com/jakVcUf.png', 
     shortdes:'The gold standard in protein with 24 grams of protein and essential amino acids for muscle growth.', 
     description: 'Lorem ipsum dolor amet before they sold out ugh celiac try-hard, tacos plaid aesthetic gentrify chicharrones hammock marfa intelligentsia drinking vinegar. Art party sartorial distillery mixtape fashion axe viral flannel DIY. Kinfolk lo-fi organic, tilde portland subway tile affogato copper mug blue bottle readymade iPhone crucifix. Single-origin coffee intelligentsia chillwave etsy actually chicharrones leggings banh mi shoreditch.', 
@@ -74,6 +74,15 @@ Promise.all([Product.remove({}), Order.remove({})])
     shortdes:'Advanced pre-workout made for anyone trying to increase energy, and focus. Great for those workouts that require you to have that extra push.', 
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
     price: 29.99, 
+    prodListImage:'https://i.imgur.com/jR3gxw2.jpg', 
+    nutrImage:'https://i.imgur.com/M20Tb7s.jpg', 
+    prodShowImage:'https://i.imgur.com/zws18Al.png' 
+  },
+    {name: 'BCAA Energy',
+    icon:'https://i.imgur.com/br4lSRb.png', 
+    shortdes:'BCAA Powder with natural energy made from coffee and green tea to help with focus and speed up recovery.', 
+    description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
+    price: 19.99, 
     prodListImage:'https://i.imgur.com/jR3gxw2.jpg', 
     nutrImage:'https://i.imgur.com/M20Tb7s.jpg', 
     prodShowImage:'https://i.imgur.com/zws18Al.png' 

@@ -68,8 +68,10 @@ class App extends Component {
   componentDidMount() {
     let user = userService.getUser();
     this.setState({ user }, function() {
-      ordersAPI.getCart()
-      .then(cart => this.setState({ cart }));
+      if (user) {
+        ordersAPI.getCart()
+        .then(cart => this.setState({ cart }));
+      }
     });
   }
 
@@ -113,6 +115,7 @@ class App extends Component {
             <Route exact path="/shop/:id" render={(props) =>
               <ProductPage {...props}
                 handleAddItem={this.handleAddItem}
+                user={this.state.user}
               />
               }/>
           </Switch>

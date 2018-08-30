@@ -9,7 +9,7 @@
 .NavBar {
   height: 65px;
   color: white;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
   background: repeating-linear-gradient(90deg,
