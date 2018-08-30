@@ -12,15 +12,16 @@ const ProductList = (props) => {
               <th><img className="icon" src="https://i.imgur.com/jakVcUf.png" /></th>
               <th><img className="icon" src="https://i.imgur.com/jGSoKm0.png" /></th>
               <th><img className="icon" src="https://i.imgur.com/GjKBoLz.png" /></th>
+              <th><img className="icon" src="https://i.imgur.com/br4lSRb.png" /></th>
             </tr>
             <tr>
-              <td>Protein</td>
-              <td>Energy</td>
+              <td>Proteins</td>
+              <td>Pre-workouts</td>
               <td>Vitamins & Minerals</td>
+              <td>Amino Acids</td>
             </tr>
           </table>
         </div>
-        <h2>Product</h2>
       </div>
       <div className="ProductList-Products">
         {props.products.map(p =>

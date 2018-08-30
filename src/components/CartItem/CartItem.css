@@ -5,3 +5,30 @@
   flex-direction: column;
   margin: 0 auto;
 }
+
+.CartItem {
+  border: 1px solid black;
+  width: 10px;
+}
+
+.CartItem img {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.HeadingAndPic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.CartItem h4 {
+  margin: 20px;
+}
+
+.CartItem h1 {
+  padding-top: 20px;
+}
