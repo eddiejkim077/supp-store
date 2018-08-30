@@ -10,11 +10,11 @@ const Cart = (props) => {
       <div className="CartAndTotal">
         <CartItems 
           items={props.cart.items}
-          handleRemoveItem={props.handleRemoveItem}
+          handleRemoveQuantity={props.handleRemoveQuantity}
           handleAddItem={props.handleAddItem}
         />
         <div className="CartTotal position-fixed">
-          <h4>subtotal: ${total}</h4>
+          <h4>subtotal: ${parseFloat(total).toFixed(2)}</h4>
           <h4 className="CartTotalTax">tax: 7.25%</h4>
           <h2>total: ${parseFloat(total + (total * .0725)).toFixed(2)}</h2>
         </div>

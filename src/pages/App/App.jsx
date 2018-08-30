@@ -103,7 +103,7 @@ class App extends Component {
               <CartPage {...props}
                 cart={this.state.cart}
                 user={this.state.user}
-                handleRemoveItem={this.handleRemoveItem}
+                handleRemoveQuantity={this.handleRemoveQuantity}
                 handleAddItem={this.handleAddItem}
               />
             }/>

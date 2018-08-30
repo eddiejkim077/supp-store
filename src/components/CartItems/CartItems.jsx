@@ -8,7 +8,7 @@ const CartItems = (props) => (
       props.items.map(item => 
         <CartItem 
           item={item}
-          handleRemoveItem={props.handleRemoveItem}
+          handleRemoveQuantity={props.handleRemoveQuantity}
           handleAddItem={props.handleAddItem}
         />)
     :

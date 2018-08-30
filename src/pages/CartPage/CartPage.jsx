@@ -7,7 +7,7 @@ const CartPage = (props) => {
     {props.cart  &&   
       <Cart 
         cart={props.cart}
-        handleRemoveItem={props.handleRemoveItem}
+        handleRemoveQuantity={props.handleRemoveQuantity}
         handleAddItem={props.handleAddItem}
       />
     }
