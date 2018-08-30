@@ -4,11 +4,11 @@ import Cart from '../../components/Cart/Cart';
 const CartPage = (props) => {
   return (
     <div className="CartPage">
-    {props.cart  && 
+    {props.cart  &&   
       <Cart 
         cart={props.cart}
         handleRemoveItem={props.handleRemoveItem}
-        
+        // handleAddItem={this.props.handleAddItem}
       />
     }
     </div>

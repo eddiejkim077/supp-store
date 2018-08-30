@@ -24,8 +24,7 @@ class App extends Component {
     this.state = {
       user: {},
       cart: null,
-      products: [],
-      selectedProduct: null
+      products: []
     }
   }
 
@@ -61,9 +60,7 @@ class App extends Component {
   }
 
   handleSelectedProduct = (product) => {
-    this.setState({selectedProduct: product}, function() {
-      this.props.history.push(`/shop/${product._id}`);
-    });
+    this.props.history.push(`/shop/${product._id}`);
   }
 
   /*---------- Lifecycle Methods ----------*/
@@ -110,14 +107,12 @@ class App extends Component {
             }/>
             <Route exact path="/shop" render={(props) =>
               <ShopPage {...props}
-                handleAddItem={this.handleAddItem}
                 handleSelectedProduct={this.handleSelectedProduct}
               />
             }/>
             <Route exact path="/shop/:id" render={(props) =>
               <ProductPage {...props}
                 handleAddItem={this.handleAddItem}
-                product={this.state.selectedProduct}
               />
               }/>
           </Switch>

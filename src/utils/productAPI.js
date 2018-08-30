@@ -11,10 +11,20 @@ function index() {
   .then(products => products);
 }
 
+function getProduct(productId) {
+  return fetch(BASE_URL + productId, getAuthRequestOptions('GET'))
+  .then(res => {
+    if (res.ok) return res.json();
+    throw new Error('Bad Credentials');
+  })
+  .then(product => product);
+}
+
 export default {
   index,
   addProduct,
-  removeProduct
+  removeProduct,
+  getProduct
 }
 
 /*------- Helper Functions -------*/
@@ -32,8 +42,7 @@ function addProduct(productId) {
 
 function removeProduct(productId) {
   var options = getAuthRequestOptions('DELETE');
-  options.body = JSON.stringify({productId});
-  return fetch(BASE_URL + '/cart/', options)
+  return fetch(`${BASE_URL}cart/${productId}`, options)
     .then(res => {
       if (res.ok) return res.json();
       throw new Error('Error deleting product to Cart');

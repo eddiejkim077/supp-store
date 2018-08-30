@@ -27,7 +27,6 @@ const ProductList = (props) => {
         {props.products.map(p =>
           <Product
             product={p}
-            handleAddItem={props.handleAddItem}
             handleSelectedProduct={props.handleSelectedProduct}
           />
         )}

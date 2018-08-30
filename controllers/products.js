@@ -8,6 +8,13 @@ function index(req,res) {
   });
 }
 
+function getProduct(req,res) {
+  Product.findById(req.params.id, function(err, product) {
+    if (err) return res.status(400).json(err);
+    res.json(product);
+  })
+}
+
 function addProduct(req, res) {
   Order.cartForUser(req.user._id, function(cart) {
     cart.addProduct(req.body.productId, function(cart) {
@@ -18,7 +25,7 @@ function addProduct(req, res) {
 
 function removeProduct(req,res) {
   Order.cartForUser(req.user._id, function(cart) {
-    cart.removeProduct(req.body.productId, function(cart) {
+    cart.removeProduct(req.params.id, function(cart) {
       res.json(cart);
     });
   });
@@ -27,5 +34,6 @@ function removeProduct(req,res) {
 module.exports = {
   index,
   addProduct,
-  removeProduct
+  removeProduct,
+  getProduct
 }
