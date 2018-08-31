@@ -5,11 +5,11 @@ import LoginForm from '../../components/LoginForm/LoginForm';
 const LoginPage = (props) => {
   return (
     <div className="LoginPage">
-      <LoginForm 
-        handleLogin={props.handleLogin}
-        {...props}
-      />
-
+      <h2 className="LoginPageMessage">{props.location.message}</h2>        
+        <LoginForm 
+          handleLogin={props.handleLogin}
+          {...props}
+        />
     </div>
   );
 }

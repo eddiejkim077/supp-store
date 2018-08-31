@@ -1,0 +1,8 @@
+*:focus {
+  outline: none;
+}
+.SignupForm {
+  margin-top: 25px;
+  width: 265px;
+}
+

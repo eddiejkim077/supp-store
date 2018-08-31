@@ -9,61 +9,64 @@ const ProductList = (props) => {
       <div>
         <div className="IconHelp">
           <table className="IconHelpTable">
-            <tr>
-              <th>
-                <img 
-                  alt="Protein"
-                  onClick={() => props.handleFilter('Protein')} 
-                  className="icon zoom" 
-                  src="https://i.imgur.com/jakVcUf.png" 
-                />
-              </th>
-              <th>
-                <img 
-                  alt="PreWorkout" 
-                  onClick={() => props.handleFilter('Pre')} 
-                  className="icon zoom" 
-                  src="https://i.imgur.com/jGSoKm0.png" 
-                />
-              </th> 
-              <th>
-                <img 
-                  alt="Vitamin"
-                  onClick={() => props.handleFilter('Vitamin')} 
-                  className="icon zoom" 
-                  src="https://i.imgur.com/GjKBoLz.png" 
-                />
-              </th>
-              <th>
-                <img 
-                  alt="Amino"
-                  onClick={() => props.handleFilter('Amino')} 
-                  className="icon zoom" 
-                  src="https://i.imgur.com/br4lSRb.png" 
-                  />
-              </th>
-              <th>
+            <tbody>
+              <tr>
+                <th>
                   <img 
-                    alt="Clear"
-                    onClick={() => props.handleClearFilter()} 
-                    className="Iconx zoom"
-                    src="https://i.imgur.com/gMAjgJ6.png"
+                    alt="Protein"
+                    onClick={() => props.handleFilter('Protein')} 
+                    className="icon zoom" 
+                    src="https://i.imgur.com/jakVcUf.png" 
                   />
-              </th>
-            </tr>
-            <tr>
-              <td>Proteins</td>
-              <td>Pre-workouts</td>
-              <td>Vitamins & Minerals</td>
-              <td>Amino Acids</td>
-              <td>Clear Search</td>
-            </tr>
+                </th>
+                <th>
+                  <img 
+                    alt="PreWorkout" 
+                    onClick={() => props.handleFilter('Pre')} 
+                    className="icon zoom" 
+                    src="https://i.imgur.com/jGSoKm0.png" 
+                  />
+                </th> 
+                <th>
+                  <img 
+                    alt="Vitamin"
+                    onClick={() => props.handleFilter('Vitamin')} 
+                    className="icon zoom" 
+                    src="https://i.imgur.com/GjKBoLz.png" 
+                  />
+                </th>
+                <th>
+                  <img 
+                    alt="Amino"
+                    onClick={() => props.handleFilter('Amino')} 
+                    className="icon zoom" 
+                    src="https://i.imgur.com/br4lSRb.png" 
+                    />
+                </th>
+                <th>
+                    <img 
+                      alt="Clear"
+                      onClick={() => props.handleClearFilter()} 
+                      className="Iconx zoom"
+                      src="https://i.imgur.com/gMAjgJ6.png"
+                    />
+                </th>
+              </tr>
+              <tr>
+                <td>Proteins</td>
+                <td>Pre-workouts</td>
+                <td>Vitamins & Minerals</td>
+                <td>Amino Acids</td>
+                <td>Clear Search</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
       <div className="ProductList-Products">
         {products.map(p =>
           <Product
+            key={p.id}
             product={p}
             handleSelectedProduct={props.handleSelectedProduct}
           />

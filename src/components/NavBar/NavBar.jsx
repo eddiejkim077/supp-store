@@ -20,7 +20,6 @@ const NavBar = (props) => {
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="/signup" className="NavBar-link" > Sign Up </Link>
     </div>
-
   return(
     <div className="NavBar">  
       <Link to="/" className="NavBar-link"> <img src="https://i.imgur.com/jkaSVHl.png" /> </Link>

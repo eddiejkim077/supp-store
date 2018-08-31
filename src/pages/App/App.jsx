@@ -85,7 +85,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.productType, this.state.filter);
     return (
       <div className="App">
         <React.Fragment>
@@ -109,13 +108,17 @@ class App extends Component {
                 handleSignup={this.handleSignup}
               />
             }/>
-            <Route exact path="/cart" render={( props) =>
-              <CartPage {...props}
-                cart={this.state.cart}
-                user={this.state.user}
-                handleRemoveQuantity={this.handleRemoveQuantity}
-                handleAddItem={this.handleAddItem}
-              />
+            <Route exact path="/cart" render={(props) =>  (
+              userService.getUser() ?
+                <CartPage {...props}
+                  cart={this.state.cart}
+                  user={this.state.user}
+                  handleRemoveQuantity={this.handleRemoveQuantity}
+                  handleAddItem={this.handleAddItem}
+                />
+                :
+                <Redirect to={{pathname: '/login', message:"Please log in first"}} />
+              )
             }/>
             <Route exact path="/shop" render={(props) =>
               <ShopPage {...props}
