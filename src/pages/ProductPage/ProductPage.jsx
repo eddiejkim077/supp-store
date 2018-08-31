@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductPage.css';
 import productAPI from '../../utils/productAPI';
-
+import {Link} from 'react-router-dom';
 
 class ProductPage extends React.Component {
   constructor(props) {
@@ -30,7 +30,10 @@ class ProductPage extends React.Component {
               <img id="nutrition-image" src={this.state.product.nutrImage} />
               <h2>Product Overview</h2>
               <p className="DescriptionCard">{this.state.product.description}</p>
-              {this.props.user ? <button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button> : null}
+              {this.props.user ? 
+                  <Link to="/shop"><button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button></Link> 
+                : 
+                  <h2>Login To Buy!</h2>}
             </div>
           </div>
         </div>
