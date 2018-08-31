@@ -3,6 +3,8 @@ require('./config/database');
 var Product = require('./models/Product');
 var Order = require('./models/Order');
 
+//['Protein', 'Pre', 'Amino', 'Vitamin']}
+
 Promise.all([Product.remove({}), Order.remove({})])
 .then(() => {
   Product.create([
@@ -13,7 +15,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 57.99, 
     prodListImage:'https://i.imgur.com/S6Qd7yy.jpg', 
     nutrImage:'https://i.imgur.com/uplRdBz.jpg', 
-    prodShowImage:'https://i.imgur.com/cOh9iQZ.png'
+    prodShowImage:'https://i.imgur.com/cOh9iQZ.png',
+    productType: 'Protein'
   },
     {name: 'Pre JYM',
     icon:'https://i.imgur.com/jGSoKm0.png', 
@@ -22,7 +25,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 48.99, 
     prodListImage:'https://i.imgur.com/SQvRA7B.jpg', 
     nutrImage:'https://i.imgur.com/tC9kgTM.jpg', 
-    prodShowImage:'https://i.imgur.com/z4gix9r.png' 
+    prodShowImage:'https://i.imgur.com/z4gix9r.png',
+    productType: 'Pre' 
   },
     {name: 'VitaMode',
     icon:'https://i.imgur.com/GjKBoLz.png', 
@@ -31,7 +35,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 16.99, 
     prodListImage:'https://i.imgur.com/3TDb5Nt.jpg', 
     nutrImage:'https://i.imgur.com/7cPgbIH.jpg', 
-    prodShowImage:'https://i.imgur.com/YnYX66l.png' 
+    prodShowImage:'https://i.imgur.com/YnYX66l.png',
+    productType: 'Vitamin' 
   },
     {name: 'Syntha-6',
     icon:'https://i.imgur.com/jakVcUf.png', 
@@ -40,7 +45,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 44.99, 
     prodListImage:'https://i.imgur.com/huDsgrr.jpg', 
     nutrImage:'https://i.imgur.com/5JlZ8Y1.png', 
-    prodShowImage:'https://i.imgur.com/sKMf00Z.png' 
+    prodShowImage:'https://i.imgur.com/sKMf00Z.png',
+    productType: 'Protein' 
   },
     {name: 'ON Micronized Creatine Powder',
     icon:'https://i.imgur.com/GjKBoLz.png', 
@@ -49,7 +55,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 15.37, 
     prodListImage:'https://i.imgur.com/1oaNYud.jpg', 
     nutrImage:'https://i.imgur.com/FdKPodr.jpg', 
-    prodShowImage:'https://i.imgur.com/ZCynQGO.png' 
+    prodShowImage:'https://i.imgur.com/ZCynQGO.png',
+    productType: 'Vitamin' 
   },
     {name: 'Z-Elite',
     icon:'https://i.imgur.com/GjKBoLz.png', 
@@ -58,7 +65,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 17.97, 
     prodListImage:'https://i.imgur.com/vm0FoA6.jpg', 
     nutrImage:'https://i.imgur.com/gNd2X4H.png', 
-    prodShowImage:'https://i.imgur.com/BfGYfI2.jpg' 
+    prodShowImage:'https://i.imgur.com/BfGYfI2.jpg',
+    productType: 'Vitamin' 
   },
     {name: 'Xtend',
     icon:'https://i.imgur.com/br4lSRb.png', 
@@ -67,7 +75,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 29.99, 
     prodListImage:'https://i.imgur.com/VpuBUC6.jpg', 
     nutrImage:'https://i.imgur.com/b2jBIMk.png', 
-    prodShowImage:'https://i.imgur.com/cBvrq3H.png' 
+    prodShowImage:'https://i.imgur.com/cBvrq3H.png',
+    productType: 'Amino' 
   },
     {name: 'C4 Original',
     icon:'https://i.imgur.com/jGSoKm0.png', 
@@ -76,7 +85,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 29.99, 
     prodListImage:'https://i.imgur.com/jR3gxw2.jpg', 
     nutrImage:'https://i.imgur.com/M20Tb7s.jpg', 
-    prodShowImage:'https://i.imgur.com/zws18Al.png' 
+    prodShowImage:'https://i.imgur.com/zws18Al.png',
+    productType: 'Pre' 
   },
     {name: 'BCAA Energy',
     icon:'https://i.imgur.com/br4lSRb.png', 
@@ -85,7 +95,8 @@ Promise.all([Product.remove({}), Order.remove({})])
     price: 19.99, 
     prodListImage:'https://i.imgur.com/jR3gxw2.jpg', 
     nutrImage:'https://i.imgur.com/M20Tb7s.jpg', 
-    prodShowImage:'https://i.imgur.com/zws18Al.png' 
+    prodShowImage:'https://i.imgur.com/zws18Al.png',
+    productType: 'Amino' 
   }
 
   ]).then(() => {

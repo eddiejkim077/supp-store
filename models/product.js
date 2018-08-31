@@ -16,7 +16,8 @@ var productSchema = new mongoose.Schema({
   icon: String,
   prodListImage: String,
   nutrImage: String,
-  prodShowImage: String
+  prodShowImage: String,
+  productType: {type: String, enum: ['Protein', 'Pre', 'Amino', 'Vitamin']}
 })
 
 module.exports = mongoose.model('Product', productSchema);

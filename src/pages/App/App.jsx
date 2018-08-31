@@ -24,7 +24,8 @@ class App extends Component {
     this.state = {
       user: {},
       cart: null,
-      products: []
+      products: [],
+      filter: ''
     }
   }
 
@@ -63,6 +64,10 @@ class App extends Component {
     this.props.history.push(`/shop/${product._id}`);
   }
 
+  handleFilter = (filter) => {
+    this.setState({filter});
+  }
+
   /*---------- Lifecycle Methods ----------*/
 
   componentDidMount() {
@@ -76,6 +81,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.productType, this.state.filter);
     return (
       <div className="App">
         <React.Fragment>
@@ -109,7 +115,9 @@ class App extends Component {
             }/>
             <Route exact path="/shop" render={(props) =>
               <ShopPage {...props}
+                filter={this.state.filter}
                 handleSelectedProduct={this.handleSelectedProduct}
+                handleFilter={this.handleFilter}
               />
             }/>
             <Route exact path="/shop/:id" render={(props) =>

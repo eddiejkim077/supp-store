@@ -22,7 +22,9 @@ class ShopPage extends Component {
         <div>
           <ProductList
             products={this.state.products}
+            filter={this.props.filter}
             handleSelectedProduct={this.props.handleSelectedProduct}
+            handleFilter={this.props.handleFilter}
           />
         </div>
       </div>
