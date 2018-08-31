@@ -66,7 +66,6 @@ const ProductList = (props) => {
       <div className="ProductList-Products">
         {products.map(p =>
           <Product
-            key={p.id}
             product={p}
             handleSelectedProduct={props.handleSelectedProduct}
           />

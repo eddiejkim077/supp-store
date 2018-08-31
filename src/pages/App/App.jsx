@@ -93,12 +93,12 @@ class App extends Component {
             handleLogOut={this.handleLogOut} 
           />
           <Switch>
-            <Route exact path="/" render={() => 
-              <FrontPage
+            <Route exact path="/" render={(props) => 
+              <FrontPage {...props}
                 user={this.state.user}
               />
             }/>
-            <Route exact path="/login" render={(props) => 
+            <Route exact path="/login" render={(props) =>
               <LoginPage {...props}
                 handleLogin={this.handleLogin}
               />

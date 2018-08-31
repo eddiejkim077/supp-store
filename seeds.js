@@ -34,7 +34,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
     price: 16.99, 
     prodListImage:'https://i.imgur.com/3TDb5Nt.jpg', 
-    nutrImage:'https://i.imgur.com/7cPgbIH.jpg', 
+    nutrImage:'https://i.imgur.com/7cPgbIH.jpg?1', 
     prodShowImage:'https://i.imgur.com/YnYX66l.png',
     productType: 'Vitamin' 
   },
@@ -54,7 +54,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
     price: 15.37, 
     prodListImage:'https://i.imgur.com/1oaNYud.jpg', 
-    nutrImage:'https://i.imgur.com/FdKPodr.jpg', 
+    nutrImage:'https://i.imgur.com/FdKPodr.jpg?2', 
     prodShowImage:'https://i.imgur.com/ZCynQGO.png',
     productType: 'Vitamin' 
   },
@@ -74,7 +74,7 @@ Promise.all([Product.remove({}), Order.remove({})])
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
     price: 29.99, 
     prodListImage:'https://i.imgur.com/VpuBUC6.jpg', 
-    nutrImage:'https://i.imgur.com/b2jBIMk.png', 
+    nutrImage:'https://i.imgur.com/O23GM2y.jpg', 
     prodShowImage:'https://i.imgur.com/cBvrq3H.png',
     productType: 'Amino' 
   },

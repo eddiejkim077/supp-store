@@ -22,7 +22,7 @@ const CartItem = (props) => {
               </div>
             </div>
           </div>
-          <h4>Price: {props.item.product.price}</h4>
+          <h4>Price: {props.item.product.price * props.item.quantity}</h4>
       </div>
     </div>
   )

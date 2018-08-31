@@ -33,7 +33,8 @@ class ProductPage extends React.Component {
               {this.props.user ? 
                 <Link to="/shop"><button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button></Link> 
                 : 
-                <h2 className="LogToBuyTxt">Login To Buy!</h2>}
+                <Link to="/login"><h2 className="LogToBuyTxt">Login To Buy!</h2></Link>
+              }
             </div>
           </div>
         </div>
