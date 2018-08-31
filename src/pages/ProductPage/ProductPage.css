@@ -46,13 +46,11 @@
 }
 
 .NutritionText {
-  position: absolute;
-  right: 343px;
+  margin: 15px 163px;
   border-bottom: 1px solid black;
 }
 
 .OverviewText {
-  margin: 20px 75px;
+  margin: 20px 93px;
   border-bottom: 1px solid black;
-
 }
