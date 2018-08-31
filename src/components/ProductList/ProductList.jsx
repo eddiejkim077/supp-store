@@ -3,9 +3,7 @@ import Product from '../../components/Product/Product'
 import './ProductList.css';
 
 const ProductList = (props) => {
-
   var products = props.filter ? props.products.filter(p => p.productType === props.filter) : props.products;
-
   return (
     <section className="ProductList">
       <div>
@@ -42,7 +40,15 @@ const ProductList = (props) => {
                   onClick={() => props.handleFilter('Amino')} 
                   className="icon" 
                   src="https://i.imgur.com/br4lSRb.png" 
-              />
+                  />
+              </th>
+              <th>
+                  <img 
+                    alt="Clear"
+                    onClick={() => props.handleClearFilter()} 
+                    className="Iconx"
+                    src="https://i.imgur.com/gMAjgJ6.png"
+                  />
               </th>
             </tr>
             <tr>
@@ -50,6 +56,7 @@ const ProductList = (props) => {
               <td>Pre-workouts</td>
               <td>Vitamins & Minerals</td>
               <td>Amino Acids</td>
+              <td>Clear Search</td>
             </tr>
           </table>
         </div>

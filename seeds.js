@@ -93,9 +93,9 @@ Promise.all([Product.remove({}), Order.remove({})])
     shortdes:'BCAA Powder with natural energy made from coffee and green tea to help with focus and speed up recovery.', 
     description: 'Mixtape hexagon pop-up authentic readymade mlkshk. Knausgaard trust fund 3 wolf moon vice cliche raclette jianbing iceland farm-to-table pour-over everyday carry ennui poutine. Kitsch yuccie art party, glossier kickstarter messenger bag ethical authentic unicorn wayfarers fam bitters tattooed raclette leggings. Blog hell of kitsch tote bag brunch pinterest farm-to-table tbh aesthetic locavore scenester retro.', 
     price: 19.99, 
-    prodListImage:'https://i.imgur.com/jR3gxw2.jpg', 
+    prodListImage:'https://i.imgur.com/yq42V2M.jpg', 
     nutrImage:'https://i.imgur.com/M20Tb7s.jpg', 
-    prodShowImage:'https://i.imgur.com/zws18Al.png',
+    prodShowImage:'https://i.imgur.com/6CmMBon.png',
     productType: 'Amino' 
   }
 

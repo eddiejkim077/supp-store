@@ -68,6 +68,10 @@ class App extends Component {
     this.setState({filter});
   }
 
+  handleClearFilter = (filter) => {
+    this.setState({filter: ''})
+  }
+
   /*---------- Lifecycle Methods ----------*/
 
   componentDidMount() {
@@ -118,6 +122,7 @@ class App extends Component {
                 filter={this.state.filter}
                 handleSelectedProduct={this.handleSelectedProduct}
                 handleFilter={this.handleFilter}
+                handleClearFilter={this.handleClearFilter}
               />
             }/>
             <Route exact path="/shop/:id" render={(props) =>

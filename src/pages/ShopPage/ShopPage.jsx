@@ -25,6 +25,7 @@ class ShopPage extends Component {
             filter={this.props.filter}
             handleSelectedProduct={this.props.handleSelectedProduct}
             handleFilter={this.props.handleFilter}
+            handleClearFilter={this.props.handleClearFilter}
           />
         </div>
       </div>
