@@ -4,12 +4,12 @@
 }
 
 .DisplayPhoto {
-  height: 880px;
-  width: 770px;
+  height: 870px;
+  width: 750px;
   display:flex;
   flex-direction:column;
   margin-top: -6px;
-  margin-left: 110px;
+  margin-left: 140px;
 }
 
 .card-text {
@@ -43,6 +43,7 @@
 
 .ProductOverview {
   margin: 0 auto;
+  margin-top: -40px;
 }
 
 .NutritionText {
@@ -53,4 +54,4 @@
 .OverviewText {
   margin: 20px 93px;
   border-bottom: 1px solid black;
-}
+} 
