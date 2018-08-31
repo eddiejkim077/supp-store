@@ -1,5 +1,6 @@
 import React from 'react';
 import './CartItem.css';
+import {Link} from 'react-router-dom';
 
 const CartItem = (props) => {
   return (
@@ -9,7 +10,7 @@ const CartItem = (props) => {
           <img className="Icon" src={props.item.product.icon} />
           <h2>{props.item.product.name}</h2>
         </div>
-          <img className="HeadingImage" src={props.item.product.prodListImage} />
+          <Link to={`/shop/${props.item.product._id}`}><img className="HeadingImage" src={props.item.product.prodListImage} /></Link>
         </div>
         <div className="CartItem-Descriptions">
           <div className="QuantityAndSpinner">
