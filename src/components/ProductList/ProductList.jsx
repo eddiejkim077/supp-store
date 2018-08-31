@@ -14,7 +14,7 @@ const ProductList = (props) => {
                 <img 
                   alt="Protein"
                   onClick={() => props.handleFilter('Protein')} 
-                  className="icon" 
+                  className="icon zoom" 
                   src="https://i.imgur.com/jakVcUf.png" 
                 />
               </th>
@@ -22,7 +22,7 @@ const ProductList = (props) => {
                 <img 
                   alt="PreWorkout" 
                   onClick={() => props.handleFilter('Pre')} 
-                  className="icon" 
+                  className="icon zoom" 
                   src="https://i.imgur.com/jGSoKm0.png" 
                 />
               </th> 
@@ -30,7 +30,7 @@ const ProductList = (props) => {
                 <img 
                   alt="Vitamin"
                   onClick={() => props.handleFilter('Vitamin')} 
-                  className="icon" 
+                  className="icon zoom" 
                   src="https://i.imgur.com/GjKBoLz.png" 
                 />
               </th>
@@ -38,7 +38,7 @@ const ProductList = (props) => {
                 <img 
                   alt="Amino"
                   onClick={() => props.handleFilter('Amino')} 
-                  className="icon" 
+                  className="icon zoom" 
                   src="https://i.imgur.com/br4lSRb.png" 
                   />
               </th>
@@ -46,7 +46,7 @@ const ProductList = (props) => {
                   <img 
                     alt="Clear"
                     onClick={() => props.handleClearFilter()} 
-                    className="Iconx"
+                    className="Iconx zoom"
                     src="https://i.imgur.com/gMAjgJ6.png"
                   />
               </th>

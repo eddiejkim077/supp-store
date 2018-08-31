@@ -14,6 +14,8 @@ const NavBar = (props) => {
     </div>
   :
     <div className="NavBar-unauth">
+      <Link to="/shop" className="NavBar-link">Shop</Link>
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="/login" className="NavBar-link" > Login </Link>
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
       <Link to="/signup" className="NavBar-link" > Sign Up </Link>

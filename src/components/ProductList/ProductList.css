@@ -8,18 +8,32 @@
 }
 
 .ProductList .icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin: 0 50px;
 }
 
 .IconHelp {
   display: flex;
   justify-content: center;
+  margin-top: -50px;
 }
 
 .Iconx {
   width: 50px;
   height: 50px;
   margin: 0 50px;
+}
+
+.ProductList .zoom {
+  padding: 70px;
+  transition: transform .4s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: -53px;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

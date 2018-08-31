@@ -44,14 +44,29 @@
 .ProductOverview {
   margin: 0 auto;
   margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .NutritionText {
   margin: 15px 163px;
   border-bottom: 1px solid black;
+  display: inline-block;
 }
 
 .OverviewText {
   margin: 20px 93px;
   border-bottom: 1px solid black;
+  display: inline-block;
 } 
+
+.btn-primary:hover {
+  color: #007bff;
+  background-color: #fff;
+  border-color: black; 
+}
+
+.LogToBuyTxt {
+  padding-top: 10px;    
+}
