@@ -26,9 +26,9 @@ class ProductPage extends React.Component {
           <img className="DisplayPhoto" src={this.state.product.prodShowImage} />
           <div class="card-body">
             <div className="ProductOverview">
-              <h2>Nutrition</h2>
+              <h2 className="NutritionText">Nutrition</h2>
               <img id="nutrition-image" src={this.state.product.nutrImage} />
-              <h2>Product Overview</h2>
+              <h2 className="OverviewText">Product Overview</h2>
               <p className="DescriptionCard">{this.state.product.description}</p>
               {this.props.user ? 
                   <Link to="/shop"><button class="btn btn-primary" onClick={() => this.props.handleAddItem(this.state.product._id)}> ADD TO CART </button></Link> 

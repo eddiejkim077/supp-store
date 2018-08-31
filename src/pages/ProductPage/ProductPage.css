@@ -5,10 +5,11 @@
 
 .DisplayPhoto {
   height: 880px;
-  width: 870px;
+  width: 770px;
   display:flex;
   flex-direction:column;
-  margin-top: -17px;
+  margin-top: -6px;
+  margin-left: 110px;
 }
 
 .card-text {
@@ -32,14 +33,26 @@
 
 .card-body {
   display: flex;
+  margin-left: -20px;
 }
 
 #nutrition-image {
   height: 440px;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .ProductOverview {
   margin: 0 auto;
 }
 
+.NutritionText {
+  position: absolute;
+  right: 343px;
+  border-bottom: 1px solid black;
+}
+
+.OverviewText {
+  margin: 20px 75px;
+  border-bottom: 1px solid black;
+
+}
