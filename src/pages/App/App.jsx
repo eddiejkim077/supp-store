@@ -76,12 +76,16 @@ class App extends Component {
 
   componentDidMount() {
     let user = userService.getUser();
+    productAPI.index().then(products => {
+      this.setState({products});
+    });
     this.setState({ user }, function() {
       if (user) {
         ordersAPI.getCart()
         .then(cart => this.setState({ cart }));
       }
     });
+    
   }
 
   render() {
@@ -96,6 +100,7 @@ class App extends Component {
             <Route exact path="/" render={(props) => 
               <FrontPage {...props}
                 user={this.state.user}
+                products={this.state.products}
               />
             }/>
             <Route exact path="/login" render={(props) =>

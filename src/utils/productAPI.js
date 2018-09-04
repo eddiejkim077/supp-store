@@ -2,6 +2,15 @@ import tokenService from './tokenService';
 
 const BASE_URL = '/api/products/';
 
+export default {
+  index,
+  addProduct,
+  removeProduct,
+  getProduct
+}
+
+/*------- Helper Functions -------*/
+
 function index() {
   return fetch(BASE_URL)
   .then(res => {
@@ -19,15 +28,6 @@ function getProduct(productId) {
   })
   .then(product => product);
 }
-
-export default {
-  index,
-  addProduct,
-  removeProduct,
-  getProduct
-}
-
-/*------- Helper Functions -------*/
 
 function addProduct(productId) {
   var options = getAuthRequestOptions('POST');
