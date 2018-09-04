@@ -18,6 +18,9 @@ const Cart = (props) => {
             <h4 className="CartTotalTax">tax: 7.25%</h4>
             <h2>total: ${parseFloat(total + (total * .0725)).toFixed(2)}</h2>
           </div>
+          <div className="CartRegisteration">
+            
+          </div>
           {/* Have cart registeration on this page on the side  */}
         </div>
       </section>
