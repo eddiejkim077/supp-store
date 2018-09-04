@@ -38,12 +38,16 @@ class App extends Component {
     this.setState({
       user: userService.getUser()
     });
+    ordersAPI.getCart()
+    .then(cart => this.setState({ cart }));
   }
 
   handleLogin = () => {
     this.setState({
       user: userService.getUser()
     });
+    ordersAPI.getCart()
+    .then(cart => this.setState({ cart }));
   }
 
   handleAddItem = (productId) => {
