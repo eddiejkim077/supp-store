@@ -13,13 +13,10 @@
   margin-left: 605px;
   border-radius: 10px;
   width: 300px;
-  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 40px;
-
-
 }
 
 .Cart h1 {
@@ -32,3 +29,32 @@
   margin: 0 20px;
 }
   
+#state {
+  width: 80px;
+  margin-right: 14px;
+}
+
+#zip {
+  width: 80px;
+}
+
+.StateAndZip {
+  text-align: left;
+  margin-top: 9px;
+  margin-bottom: 50px;
+}
+
+label {
+  text-align: left;
+  margin-left: 12px;
+}
+
+.AddressForm {
+  margin-top: 5px;
+}
+
+#fname, #adr, #city{
+  margin: 12px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}

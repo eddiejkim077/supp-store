@@ -23,7 +23,7 @@ const CartItem = (props) => {
               </div>
             </div>
           </div>
-          <h4>Price: {props.item.product.price * props.item.quantity}</h4>
+          <h4>Price: {parseFloat(props.item.product.price * props.item.quantity).toFixed(2)}</h4>
       </div>
     </div>
   )
