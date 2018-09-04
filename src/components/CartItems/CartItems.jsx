@@ -12,7 +12,7 @@ const CartItems = (props) => (
           handleAddItem={props.handleAddItem}
         />)
     :
-      <h3>No Items</h3>
+      <h3>You have no items in your cart!</h3>
     }
   </div>
 )
