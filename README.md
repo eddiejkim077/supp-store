@@ -1,13 +1,15 @@
 # Supps and Stuff
----
+
+
 
 ### Overview
+---
 
 Supps and Stuff is a storefront app using React on the front-end that is hosted on Heroku. This app uses seeded data for the products, and a user has the ability to explore the different supplements. Also, this app has a cart feature that includes a checkout option that is still in development. Checkout supps and stuff for all your supplement needs! 
 
 
 ### Screenshot
---
+---
 
 #### Product List Page
 ![Alt text](https://i.imgur.com/Z9n65vz.png)
@@ -17,7 +19,7 @@ Supps and Stuff is a storefront app using React on the front-end that is hosted 
 
 ### Technologies Used
 
---
+---
 
 - HTML
 - CSS
@@ -34,15 +36,15 @@ Supps and Stuff is a storefront app using React on the front-end that is hosted 
 
 ### Getting Started
 
---
-**[Supp Store] (https://supp-store.herokuapp.com/)**
+---
+**[Supp Store](https://supp-store.herokuapp.com/)**
 
-**[Trello] (https://trello.com/b/nyXDAkwJ/storefront)**
+**[Trello](https://trello.com/b/nyXDAkwJ/storefront)**
 
 
 ### Unsolved Problems
 
---
+---
 
 - The checkout feature is yet to be implemented, and have more information a user can input. 
 - An admin feature so they can add or remove products. 
@@ -50,7 +52,7 @@ Supps and Stuff is a storefront app using React on the front-end that is hosted 
 
 ### Future Enhancements
 
---
+---
 
 - Adding checkout feature, and have a checkout page dedicated for shipping/billing information.
 - A more in depth product show page.
