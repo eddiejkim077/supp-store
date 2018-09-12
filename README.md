@@ -1,12 +1,11 @@
-# Supps and Stuff
+# HardGainer Supplements
 
 
 
 ### Overview
 ---
 
-Supps and Stuff is a storefront app using React on the front-end that is hosted on Heroku. This app uses seeded data for the products, and a user has the ability to explore the different supplements. Also, this app has a cart feature that includes a checkout option that is still in development. Checkout supps and stuff for all your supplement needs! 
-
+HardGainer Supplements is a storefront app using React on the front-end that is hosted on Heroku. This app uses seeded data for the products, and a user has the ability to explore the different supplements. Also, this app has a cart feature that includes a checkout option that is still in development.
 
 ### Screenshot
 ---
